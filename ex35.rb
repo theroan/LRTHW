@@ -31,6 +31,11 @@ def bear_room()
 	bear_moved = false
 
 	while true
+		puts "1. take honey"
+		puts "2. taunt bear"
+		if bear_moved
+			puts "3. open door"
+		end
 		prompt; next_move = gets.chomp;
 
 		if next_move == "take honey"
@@ -97,10 +102,9 @@ def map(where)
 	if where == 1
 		mp = <<EOL
 Minimap:
-		_________
+		|_ _|_ _|
 		|       |
-		    x
-		|_______|
+		|___x___|
 
 EOL
 		puts mp
@@ -114,8 +118,8 @@ Minimap:
 		|___ ___|
 		|h  B  h|
 		|h     h|
-		|___x___|
-		|       |
+		|___x___|__
+		|
 
 EOL
 		puts mp
@@ -129,12 +133,12 @@ Minimap:
 		|___ ___|
 		|h    Bh|
 		|h  x  h|
-		|___ ___|
-		|       |
+		|___ ___|__
+		|
 
 EOL
 		puts mp
-	
+
 	# enters gold_room
 	elsif where == 4
 		mp = <<EOL
@@ -155,16 +159,16 @@ EOL
 		mp = <<EOL
 Minimap:
   C = Cthulhu
-	  _________
-	  |   C   |
-	  |       |
-	  |___x___|
-	  |       |
+		  _________
+		  |   C   |
+		  |       |
+		__|___x___|
+		          |
 
 EOL
 		puts mp
 	end
-		
+
 end
 
-start()								
+start()		
