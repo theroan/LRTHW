@@ -97,9 +97,10 @@ def map(where)
 	if where == 1
 		mp = <<EOL
 Minimap:
-		|_ _|_ _|
+		_________
 		|       |
-		|___x___|
+		    x
+		|_______|
 
 EOL
 		puts mp
@@ -113,8 +114,8 @@ Minimap:
 		|___ ___|
 		|h  B  h|
 		|h     h|
-		|___x___|__
-		|
+		|___x___|
+		|       |
 
 EOL
 		puts mp
@@ -128,8 +129,8 @@ Minimap:
 		|___ ___|
 		|h    Bh|
 		|h  x  h|
-		|___ ___|__
-		|
+		|___ ___|
+		|       |
 
 EOL
 		puts mp
@@ -154,11 +155,11 @@ EOL
 		mp = <<EOL
 Minimap:
   C = Cthulhu
-		  _________
-		  |   C   |
-		  |       |
-		__|___x___|
-		          |
+	  _________
+	  |   C   |
+	  |       |
+	  |___x___|
+	  |       |
 
 EOL
 		puts mp
