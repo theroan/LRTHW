@@ -86,13 +86,13 @@ def start()
 end
 
 def map()
-		mpa = <<EOL
-		|_ _|_ _|
-		|       |
-		|___x___|
-		EOL;
+	mp = <<EOL
+	|_ _|_ _|
+	|       |
+	|___x___|
+	EOL
 
-		puts "#{mapa}"
+	puts mp
 end
 
 start()								
