@@ -68,7 +68,7 @@ def dead(why)
 end
 
 def start()
-	map()
+	map(1)
 
 	puts "You are in a dark room."
 	puts "There is a door to your rigth and left."
@@ -85,14 +85,20 @@ def start()
 	end
 end
 
-def map()
-	mp = <<EOL
-	|_ _|_ _|
-	|       |
-	|___x___|
-	EOL
 
-	puts mp
+
+def map(where)
+	if where == 1
+		mp = <<EOL
+Minimap:
+		|_ _|_ _|
+		|       |
+		|___x___|
+		
+EOL
+
+		puts mp
+ end
 end
 
 start()								
